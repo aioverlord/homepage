@@ -7,7 +7,7 @@ body {
   @include align-items(center);
   @include display(flex);
   @include justify-content(center);
-  height: 100vh;
+  height: 50vh;
 
   .container {
     text-align: center;
@@ -16,4 +16,20 @@ body {
       font-weight: 200;
     }
   }
+}
+
+.boxes {
+  @include outer-container();
+}
+
+.box {
+  background: tint(red, 40%);
+  @include size(100px);
+  margin: 20px;
+  float: left;
+  @include span-columns(3);
+}
+
+p {
+  font-family: $georgia;
 }
